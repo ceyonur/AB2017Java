@@ -29,8 +29,8 @@ public class MultiDimArray {
         int n = 10;
         int[][] multiplicationMatrix = generateMultiplicationMatrix(n);
         printMultiplicationMatrix(multiplicationMatrix);
-        String a = "";
-        a.
+        
+        
     }
     
     public static int[][] generateMultiplicationMatrix(int n){

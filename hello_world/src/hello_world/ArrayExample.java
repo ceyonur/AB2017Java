@@ -5,6 +5,10 @@
  */
 package hello_world;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 /**
  *
  * @author oyas
@@ -21,6 +25,8 @@ public class ArrayExample {
        printArray(erey);
        reverseArray(erey);
        printArray(erey);       
+       List<String> e = new ArrayList<String>();
+      
     }
       
       

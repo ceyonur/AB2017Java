@@ -9,17 +9,18 @@ package kitty;
  *
  * @author oyas
  */
-public class Cat {   
+public class Cat implements Comparable<Cat> {   
     
     private String name;
     private String color;
     private int age;
     public static final int NUMBER_OF_FEET = 4;
 
-    public Cat(String name, String color, int age) {
-        this.name = name;
+    public Cat(String name, String color, int age) throws AgeUnderZeroException {
+        setAge(age);
+        this.name=name;
         this.color = color;
-        this.age = age;
+        
     }
 
     public String getName() {
@@ -42,10 +43,12 @@ public class Cat {
         this.color = color;
     }*/
 
-    public void setAge(int age) {
-        if(age > 0) {
-        this.age = age;
-                }
+    public void setAge(int age) throws AgeUnderZeroException {
+        if(age < 0) {
+        throw new AgeUnderZeroException("The age should be bigger than 0");
+        }else{
+            this.age=age;
+        }
     }
 
     public void sayMeow() {
@@ -60,6 +63,11 @@ public class Cat {
     
     public void printHowManyEyes(){
         System.out.print("Two ");
+    }
+
+    @Override
+    public int compareTo(Cat t) {
+        return Integer.compare(this.getAge(),t.getAge());
     }
 
 }

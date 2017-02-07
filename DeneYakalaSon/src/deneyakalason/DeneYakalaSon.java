@@ -31,6 +31,10 @@ public class DeneYakalaSon {
             System.out.println("Yuh 0'a da bölünmez ki.");
             e.printStackTrace();
         }
+        finally{
+                 System.out.println("Koda Devam mı1?");
+
+    }
          System.out.println("Koda Devam mı?");
       
     }

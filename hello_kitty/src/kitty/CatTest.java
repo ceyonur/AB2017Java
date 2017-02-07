@@ -5,6 +5,10 @@
  */
 package kitty;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  *
  * @author oyas
@@ -14,10 +18,23 @@ public class CatTest {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws  AgeUnderZeroException {
         // TODO code application logic here
-        Cat kedi1 = new Cat("tekir","beyaz",4);
-        System.out.println(kedi1.getColor());
+        try{
+            Cat kedi1 = new Cat("tekir","beyaz",-2);
+            Cat kedi2 = new Cat("boncuk","siyah",5);
+            
+        }catch(AgeUnderZeroException e){
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+        
+        
+        /*list.add(kedi2);
+        list.add(kedi1);
+        Collections.sort(list);
+        System.out.println(list);
+
         /*System.out.println("kedi1: " + kedi1.getName());
         Cat kedi2 = new Cat("boncuk","siyah",5);
         System.out.println("kedi2: "+ kedi2.getName());
